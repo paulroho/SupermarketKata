@@ -43,7 +43,7 @@ namespace Supermarket
 
         public Product GetProductByName(string name)
         {
-            return Products.FindLast(p => p.Name == name);
+            return Products.Single(p => p.Name == name);
         }
     }
 }
