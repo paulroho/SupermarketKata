@@ -9,6 +9,7 @@ namespace Supermarket
     {
         Product GetProductByNumber(EAN number);
         Product GetProductByName(string name);
+        void Add(Product product);
         void AddRange(IEnumerable<Product> products);
     }
 
