@@ -41,13 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Checkout\BookingLine.cs" />
-    <Compile Include="Model\Checkout\ICashRegister.cs" />
     <Compile Include="Model\Core\EAN.cs" />
     <Compile Include="Model\Core\Product.cs" />
     <Compile Include="Model\Core\Discount.cs" />
     <Compile Include="Model\Checkout\CashRegister.cs" />
     <Compile Include="ProductRepository.cs" />
-    <Compile Include="ProductRepositoryExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Checkout\Receipt.cs" />
     <Compile Include="Model\Checkout\VATLine.cs" />

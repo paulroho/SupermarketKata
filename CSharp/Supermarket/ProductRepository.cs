@@ -5,36 +5,30 @@ using Supermarket.Model.Core;
 
 namespace Supermarket
 {
-    public class ProductRepository
+    public interface IProductRepository
     {
-        public ProductRepository()
-        {
-            Products = GetProductList();
-        }
+        Product GetProductByNumber(EAN number);
+        Product GetProductByName(string name);
+        void AddRange(IEnumerable<Product> products);
+    }
 
+    public class ProductRepository : IProductRepository
+    {
         public List<Product> Products { get; }
 
-        private List<Product> GetProductList()
+        public ProductRepository()
         {
-            const int productCount = 15;
-
-            return Enumerable.Range(1, productCount)
-                             .Select(CreateAProduct)
-                             .ToList();
+            Products = new List<Product>();
         }
 
-        private static Product CreateAProduct(int i)
+        public void Add(Product product)
         {
-            var dicount = i%3;
-            var vat = i%2;
-            var product = new Product
-            {
-                Name = $"Product {i}",
-                UnitPrice = i*11,
-                Discount = dicount == 0 ? Discount.None : dicount == 1 ? Discount.Take3Pay2 : Discount.Take5Pay4,
-                VATPercentage = vat == 0 ? 10 : 20
-            };
-            return product;
+            Products.Add(product);
+        }
+
+        public void AddRange(IEnumerable<Product> products)
+        {
+            Products.AddRange(products);
         }
 
         public Product GetProductByNumber(EAN number)
@@ -46,9 +40,9 @@ namespace Supermarket
             return Products.SingleOrDefault(item => item.Number.Code == number.Code);
         }
 
-        public void Add(Product product)
+        public Product GetProductByName(string name)
         {
-            Products.Add(product);
+            return Products.FindLast(p => p.Name == name);
         }
     }
 }

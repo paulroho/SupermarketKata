@@ -28,6 +28,8 @@ namespace Supermarket.Model.Core
             return text.All(c => c >= '0' && c <= '9');
         }
 
+        public override string ToString() => $"EAN{Code.Length}: {Code}";
+
         protected bool Equals(EAN other)
         {
             return string.Equals(Code, other.Code);

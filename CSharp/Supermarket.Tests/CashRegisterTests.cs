@@ -10,11 +10,11 @@ namespace Supermarket.Tests
         [TestMethod]
         public void Feature_CheckingOutItemsWithSingleVAT()
         {
-            var register = new CashRegister();
+            ICashRegister register = new CashRegister();
 
             var repo = new ProductRepository();
             var milkEAN = EAN.NewEAN("817312345");
-            var milk = new Product {Name = "1l milk", Number = milkEAN, UnitPrice = 0.79M, VATPercentage = 20};
+            var milk = new Product {Name = "1l milk", Number = milkEAN, UnitPrice = 0.79M, VATRate = 20};
             repo.Add(milk);
 
             // Act
@@ -26,7 +26,7 @@ namespace Supermarket.Tests
             Assert.AreEqual(0.79M, receipt.Bookings[0].Price);
 
             Assert.AreEqual(1, receipt.VATLines.Count);
-            Assert.AreEqual(20, receipt.VATLines[0].Percentage);
+            Assert.AreEqual(20, receipt.VATLines[0].Rate);
             Assert.AreEqual(0.16M, receipt.VATLines[0].Amount);
 
             Assert.AreEqual(0.79M, receipt.Total);

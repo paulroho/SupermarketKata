@@ -7,12 +7,12 @@
 
 Background: Products we have in stock
 	Given we have the following products in stock:
-	| Name                     | UnitPrice | VAT rate |
-	| Milk 1l                  | 1.00€     | 20%      |
-	| Butter 250g              | 1.50€     | 20%      |
-	| Gherkins 350g            | 3.00€     | 20%      |
-	| Book "Harry Potter"      | 12.00€    | 10%      |
-	| Book "Cucumbers Slicing" | 8.00€     | 10%      |
+	| Name                     | Unit Price | VAT Rate |
+	| Milk 1l                  | 1.00€      | 20%      |
+	| Butter 250g              | 1.50€      | 20%      |
+	| Gherkins 350g            | 3.00€      | 20%      |
+	| Book "Harry Potter"      | 12.00€     | 10%      |
+	| Book "Cucumbers Slicing" | 8.00€      | 10%      |
 
 
 
