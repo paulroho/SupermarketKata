@@ -45,7 +45,6 @@
     <Compile Include="Model\Core\Product.cs" />
     <Compile Include="Model\Core\Discount.cs" />
     <Compile Include="ProductRepository.cs" />
-    <Compile Include="ProductRepositoryExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Checkout\Receipt.cs" />
     <Compile Include="Model\Checkout\VATLine.cs" />
