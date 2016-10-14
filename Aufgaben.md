@@ -13,6 +13,7 @@ Die Rechnung soll
 
 aufweisen.
 
+---
 
 ## Aufgabe 2 - Unterschiedliche Steuersätze
 
@@ -26,6 +27,7 @@ Die Rechnung soll
 
 aufweisen.
 
+---
 
 ## Aufgabe 3 - Rabatte
 

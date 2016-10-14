@@ -11,6 +11,7 @@ The receipt should have
 - a single VAT line
 - the correct sum (incl. VAT).
 
+---
 
 ## Task 2 - Different VATs
 
@@ -22,6 +23,7 @@ The receipt should have
 - **NEW:** one line per VAT used
 - the correct sum (incl. VAT).
 
+---
 
 ## Task 3 - Discounts
 
