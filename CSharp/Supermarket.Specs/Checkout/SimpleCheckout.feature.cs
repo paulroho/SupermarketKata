@@ -74,8 +74,8 @@ namespace Supermarket.Specs.Checkout
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
-                        "UnitPrice",
-                        "VAT rate"});
+                        "Unit Price",
+                        "VAT Rate"});
             table1.AddRow(new string[] {
                         "Milk 1l",
                         "1.00€",

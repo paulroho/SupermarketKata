@@ -54,14 +54,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Bindings\CashDeskContext.cs" />
     <Compile Include="Bindings\CheckoutBindings.cs" />
     <Compile Include="Bindings\CommonBindings.cs" />
+    <Compile Include="Bindings\Hooks.cs" />
+    <Compile Include="Bindings\TableExtensions.cs" />
     <Compile Include="Checkout\SimpleCheckout.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SimpleCheckout.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\LinqExtensions.cs" />
+    <Compile Include="Tools\ProductSpecExtension.cs" />
+    <Compile Include="Tools\ReceiptPrinter.cs" />
+    <Compile Include="Tools\ReceiptSpecExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +77,12 @@
       <LastGenOutput>SimpleCheckout.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Supermarket\Supermarket.csproj">
+      <Project>{4045B685-7AEA-43FC-BA23-5130A5B1CF28}</Project>
+      <Name>Supermarket</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
