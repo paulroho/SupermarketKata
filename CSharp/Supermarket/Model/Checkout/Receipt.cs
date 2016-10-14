@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Supermarket.Model.CashRegister
+namespace Supermarket.Model.Checkout
 {
     public class Receipt
     {

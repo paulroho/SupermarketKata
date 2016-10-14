@@ -40,15 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\CashRegister\BookingLine.cs" />
+    <Compile Include="Model\Checkout\BookingLine.cs" />
     <Compile Include="Model\Core\EAN.cs" />
     <Compile Include="Model\Core\Product.cs" />
     <Compile Include="Model\Core\Discount.cs" />
     <Compile Include="ProductRepository.cs" />
     <Compile Include="ProductRepositoryExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\CashRegister\Receipt.cs" />
-    <Compile Include="Model\CashRegister\VATLine.cs" />
+    <Compile Include="Model\Checkout\Receipt.cs" />
+    <Compile Include="Model\Checkout\VATLine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
