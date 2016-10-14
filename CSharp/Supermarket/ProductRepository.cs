@@ -45,5 +45,10 @@ namespace Supermarket
             }
             return Products.SingleOrDefault(item => item.Number.Code == number.Code);
         }
+
+        public void Add(Product product)
+        {
+            Products.Add(product);
+        }
     }
 }
