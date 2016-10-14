@@ -8,9 +8,9 @@ namespace Supermarket.Specs.Bindings
     [Binding]
     public class CommonBindings
     {
-        private readonly CashDeskContext _context;
+        private readonly CashDeskSpecsContext _context;
 
-        public CommonBindings(CashDeskContext context)
+        public CommonBindings(CashDeskSpecsContext context)
         {
             _context = context;
         }

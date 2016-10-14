@@ -9,9 +9,9 @@ namespace Supermarket.Specs.Bindings
     [Binding]
     public class CheckoutBindings
     {
-        private readonly CashDeskContext _context;
+        private readonly CashDeskSpecsContext _context;
 
-        public CheckoutBindings(CashDeskContext context)
+        public CheckoutBindings(CashDeskSpecsContext context)
         {
             _context = context;
         }
@@ -26,7 +26,7 @@ namespace Supermarket.Specs.Bindings
         [When(@"I check out")]
         public void WhenICheckOut()
         {
-            Receipt receipt = null; // TODO: Get the receipt
+            Receipt receipt = _context.Checkout();
             // ReSharper disable once ExpressionIsAlwaysNull
             _context.Receipt = receipt;
         }

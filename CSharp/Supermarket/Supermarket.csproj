@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Checkout\BookingLine.cs" />
+    <Compile Include="Model\Checkout\CashRegister.cs" />
     <Compile Include="Model\Core\EAN.cs" />
     <Compile Include="Model\Core\Product.cs" />
     <Compile Include="Model\Core\Discount.cs" />

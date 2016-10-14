@@ -1,4 +1,5 @@
 ﻿using BoDi;
+using Supermarket.Model.Checkout;
 using TechTalk.SpecFlow;
 
 namespace Supermarket.Specs.Bindings
@@ -22,6 +23,7 @@ namespace Supermarket.Specs.Bindings
         private void RegisterServices()
         {
             _objectContainer.RegisterTypeAs<ProductRepository, IProductRepository>();
+            _objectContainer.RegisterTypeAs<CashRegister, ICashRegister>();
         }
     }
 }
