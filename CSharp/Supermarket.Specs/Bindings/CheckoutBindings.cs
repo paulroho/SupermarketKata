@@ -26,8 +26,7 @@ namespace Supermarket.Specs.Bindings
         [When(@"I check out")]
         public void WhenICheckOut()
         {
-            Receipt receipt = _context.Checkout();
-            // ReSharper disable once ExpressionIsAlwaysNull
+            var receipt = _context.Checkout();
             _context.Receipt = receipt;
         }
 
