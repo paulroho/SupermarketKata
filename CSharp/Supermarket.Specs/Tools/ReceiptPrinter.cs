@@ -25,7 +25,7 @@ namespace Supermarket.Specs.Tools
         {
             foreach (var line in receipt.TaxLines)
             {
-                sb.AppendLine($"Incl. {line.Rate / 100:P} VAT {DecimalToString(line.Amount)}");
+                sb.AppendLine($"Incl. {line.Rate / 100.0:P0} VAT {DecimalToString(line.Amount)}");
             }
         }
 

@@ -5,6 +5,6 @@ namespace Supermarket.Model.Checkout
         public int Rate { get; set; }
         public decimal Amount { get; set; }
 
-        public override string ToString() => $"VAT {Rate/100:P0}: {Amount:C}";
+        public override string ToString() => $"VAT {Rate/100.0:P0}: {Amount:C}";
     }
 }
