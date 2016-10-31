@@ -6,7 +6,6 @@ namespace Supermarket.Model.Core
         public string Name { get; set; }
         public decimal UnitPrice { get; set; }
         public int TaxRate { get; set; }
-        public Discount Discount { get; set; }
 
         public override string ToString() => $"{Name} {UnitPrice:C}";
     }

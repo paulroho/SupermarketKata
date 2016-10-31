@@ -51,7 +51,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Tools\ProductRepositoryTestExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +58,9 @@
       <Project>{4045b685-7aea-43fc-ba23-5130a5b1cf28}</Project>
       <Name>Supermarket</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tools\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
