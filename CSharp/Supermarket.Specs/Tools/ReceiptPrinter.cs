@@ -16,14 +16,14 @@ namespace Supermarket.Specs.Tools
 
             AppendBookingLines(receipt, sb);
             AppendTotal(receipt, sb);
-            AppendVATLines(receipt, sb);
+            AppendTaxLines(receipt, sb);
 
             return sb.ToString();
         }
 
-        private static void AppendVATLines(Receipt receipt, StringBuilder sb)
+        private static void AppendTaxLines(Receipt receipt, StringBuilder sb)
         {
-            foreach (var line in receipt.VATLines)
+            foreach (var line in receipt.TaxLines)
             {
                 sb.AppendLine($"Incl. {line.Rate / 100:P} VAT {DecimalToString(line.Amount)}");
             }

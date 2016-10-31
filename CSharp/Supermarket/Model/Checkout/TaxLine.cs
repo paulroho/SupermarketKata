@@ -1,6 +1,6 @@
 namespace Supermarket.Model.Checkout
 {
-    public class VATLine
+    public class TaxLine
     {
         public int Rate { get; set; }
         public decimal Amount { get; set; }

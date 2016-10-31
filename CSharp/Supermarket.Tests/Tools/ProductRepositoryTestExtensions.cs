@@ -25,13 +25,13 @@ namespace Supermarket.Tests.Tools
                 Name = $"Product {i}",
                 UnitPrice = i * 11,
                 Discount = (Discount)(i % 3),
-                VATRate = i % 2 == 0 ? 10 : 20
+                TaxRate = i % 2 == 0 ? 10 : 20
             };
         }
 
-        public static List<Product> GetNonDiscountedProductsByVAT(this ProductRepository rep, int vatPercentage)
+        public static List<Product> GetNonDiscountedProductsByTax(this ProductRepository rep, int vatPercentage)
         {
-            return rep.Products.Where(item => item.VATRate == vatPercentage && item.Discount == Discount.None).ToList();
+            return rep.Products.Where(item => item.TaxRate == vatPercentage && item.Discount == Discount.None).ToList();
         }
 
         public static List<Product> GetNonDiscountedProducts(this ProductRepository rep)

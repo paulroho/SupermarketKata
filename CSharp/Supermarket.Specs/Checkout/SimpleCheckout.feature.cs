@@ -75,7 +75,7 @@ namespace Supermarket.Specs.Checkout
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
                         "Unit Price",
-                        "VAT Rate"});
+                        "Tax Rate"});
             table1.AddRow(new string[] {
                         "Milk 1l",
                         "1.00€",
@@ -93,7 +93,7 @@ namespace Supermarket.Specs.Checkout
                         "12.00€",
                         "10%"});
             table1.AddRow(new string[] {
-                        "Book \"Cucumbers Slicing\"",
+                        "Book \"Cucumber Slicing\"",
                         "8.00€",
                         "10%"});
 #line 9
@@ -102,13 +102,13 @@ namespace Supermarket.Specs.Checkout
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scanning just products with the same VAT rate. The amount for VAT rate contained " +
-            "in the total price is shown.")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scanning just products with the same tax rate. The tax contained in the total pri" +
+            "ce is shown.")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "On checking out, a receipt with useful information is printed")]
-        public virtual void ScanningJustProductsWithTheSameVATRate_TheAmountForVATRateContainedInTheTotalPriceIsShown_()
+        public virtual void ScanningJustProductsWithTheSameTaxRate_TheTaxContainedInTheTotalPriceIsShown_()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scanning just products with the same VAT rate. The amount for VAT rate contained " +
-                    "in the total price is shown.", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scanning just products with the same tax rate. The tax contained in the total pri" +
+                    "ce is shown.", ((string[])(null)));
 #line 19
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -133,13 +133,13 @@ this.FeatureBackground();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scanning products with different VAT rate. The amount for each VAT rate contained" +
-            " in the total price is shown separately.")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scanning products with different tax rate. The tax contained in the total price i" +
+            "s shown separately for each tax rate.")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "On checking out, a receipt with useful information is printed")]
-        public virtual void ScanningProductsWithDifferentVATRate_TheAmountForEachVATRateContainedInTheTotalPriceIsShownSeparately_()
+        public virtual void ScanningProductsWithDifferentTaxRate_TheTaxContainedInTheTotalPriceIsShownSeparatelyForEachTaxRate_()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scanning products with different VAT rate. The amount for each VAT rate contained" +
-                    " in the total price is shown separately.", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scanning products with different tax rate. The tax contained in the total price i" +
+                    "s shown separately for each tax rate.", ((string[])(null)));
 #line 37
 this.ScenarioSetup(scenarioInfo);
 #line 8

@@ -19,7 +19,7 @@ namespace Supermarket.Specs.Bindings
         public void GivenWeHaveTheFollowingProductsInStock(Table table)
         {
             table.MapValue("Unit Price", c => c.TrimEnd('€'));
-            table.MapValue("VAT Rate", c => c.TrimEnd('%'));
+            table.MapValue("Tax Rate", c => c.TrimEnd('%'));
             var products = table.CreateSet<Product>().ForEach(p => p.Number = p.GetEANFromHash());
 
             _context.AddProducts(products);

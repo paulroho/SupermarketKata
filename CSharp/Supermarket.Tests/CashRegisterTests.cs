@@ -8,13 +8,13 @@ namespace Supermarket.Tests
     public class CashRegisterGuidingTests
     {
         [TestMethod]
-        public void Feature_CheckingOutItemsWithSingleVAT()
+        public void Feature_CheckingOutItemsWithSingleTax()
         {
             ICashRegister register = new CashRegister();
 
             var repo = new ProductRepository();
             var milkEAN = EAN.NewEAN("817312345");
-            var milk = new Product {Name = "1l milk", Number = milkEAN, UnitPrice = 0.79M, VATRate = 20};
+            var milk = new Product {Name = "1l milk", Number = milkEAN, UnitPrice = 0.79M, TaxRate = 20};
             repo.Add(milk);
 
             // Act
@@ -25,9 +25,9 @@ namespace Supermarket.Tests
             Assert.AreEqual("1l milk", receipt.Bookings[0].Text);
             Assert.AreEqual(0.79M, receipt.Bookings[0].Price);
 
-            Assert.AreEqual(1, receipt.VATLines.Count);
-            Assert.AreEqual(20, receipt.VATLines[0].Rate);
-            Assert.AreEqual(0.16M, receipt.VATLines[0].Amount);
+            Assert.AreEqual(1, receipt.TaxLines.Count);
+            Assert.AreEqual(20, receipt.TaxLines[0].Rate);
+            Assert.AreEqual(0.16M, receipt.TaxLines[0].Amount);
 
             Assert.AreEqual(0.79M, receipt.Total);
         }
