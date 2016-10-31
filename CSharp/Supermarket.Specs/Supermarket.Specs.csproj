@@ -59,6 +59,11 @@
     <Compile Include="Bindings\CommonBindings.cs" />
     <Compile Include="Bindings\Hooks.cs" />
     <Compile Include="Bindings\TableExtensions.cs" />
+    <Compile Include="Checkout\AdvancedCheckout.feature.cs">
+      <DependentUpon>AdvancedCheckout.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Checkout\SimpleCheckout.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,6 +77,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Checkout\AdvancedCheckout.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AdvancedCheckout.feature.cs</LastGenOutput>
+    </None>
     <None Include="Checkout\SimpleCheckout.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SimpleCheckout.feature.cs</LastGenOutput>

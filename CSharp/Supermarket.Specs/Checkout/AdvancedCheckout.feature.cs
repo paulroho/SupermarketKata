@@ -18,19 +18,19 @@ namespace Supermarket.Specs.Checkout
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class OnCheckingOutAReceiptWithUsefulInformationIsPrintedFeature
+    public partial class OnCheckingOutAReceiptWithDetailedInformationIsPrintedFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "SimpleCheckout.feature"
+#line 1 "AdvancedCheckout.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "On checking out, a receipt with useful information is printed", "\tIn order to check that I did not pay too much\r\n\tAs a customer\r\n\tI want to see fr" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "On checking out, a receipt with detailed information is printed", "\tIn order to check that I did not pay too much\r\n\tAs a customer\r\n\tI want to see fr" +
                     "om which parts the total amount I have paid consists of.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -46,9 +46,9 @@ namespace Supermarket.Specs.Checkout
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "On checking out, a receipt with useful information is printed")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "On checking out, a receipt with detailed information is printed")))
             {
-                Supermarket.Specs.Checkout.OnCheckingOutAReceiptWithUsefulInformationIsPrintedFeature.FeatureSetup(null);
+                Supermarket.Specs.Checkout.OnCheckingOutAReceiptWithDetailedInformationIsPrintedFeature.FeatureSetup(null);
             }
         }
         
@@ -102,13 +102,13 @@ namespace Supermarket.Specs.Checkout
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scanning just products with the same tax rate. The tax contained in the total pri" +
-            "ce is shown.")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "On checking out, a receipt with useful information is printed")]
-        public virtual void ScanningJustProductsWithTheSameTaxRate_TheTaxContainedInTheTotalPriceIsShown_()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scanning products with different tax rate. The tax contained in the total price i" +
+            "s shown separately for each tax rate.")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "On checking out, a receipt with detailed information is printed")]
+        public virtual void ScanningProductsWithDifferentTaxRate_TheTaxContainedInTheTotalPriceIsShownSeparatelyForEachTaxRate_()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scanning just products with the same tax rate. The tax contained in the total pri" +
-                    "ce is shown.", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scanning products with different tax rate. The tax contained in the total price i" +
+                    "s shown separately for each tax rate.", ((string[])(null)));
 #line 19
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -117,17 +117,18 @@ this.FeatureBackground();
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Product"});
             table2.AddRow(new string[] {
-                        "Milk 1l"});
+                        "Butter 250g"});
             table2.AddRow(new string[] {
-                        "Gherkins 350g"});
+                        "Book \"Cucumber Slicing\""});
 #line 20
  testRunner.Given("I scan the following products at the cash desk:", ((string)(null)), table2, "Given ");
 #line 25
  testRunner.When("I check out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 27
- testRunner.Then("the receipt contains this information:", "\tMilk 1l         1.20€\r\n\tGherkins 350g   3.60€\r\n\t---------------------\r\n\tTotal   " +
-                    "        4.80€\r\n\tIncl. 20% VAT   0.80€", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the receipt contains this information:", "\tButter 250g              1.80€\r\n\tBook \"Cucumber Slicing\"  8.80€\r\n\t--------------" +
+                    "----------------\r\n\tTotal                   10.60€\r\n\tIncl. 10% VAT            0.8" +
+                    "0€\r\n\tIncl. 20% VAT            0.30€ ", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
