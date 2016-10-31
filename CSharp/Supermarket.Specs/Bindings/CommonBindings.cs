@@ -8,11 +8,11 @@ namespace Supermarket.Specs.Bindings
     [Binding]
     public class CommonBindings
     {
-        private readonly CashDeskSpecsContext _context;
+        private readonly CashDeskSpecsDriver _driver;
 
-        public CommonBindings(CashDeskSpecsContext context)
+        public CommonBindings(CashDeskSpecsDriver driver)
         {
-            _context = context;
+            _driver = driver;
         }
 
         [Given(@"we have the following products in stock:")]
@@ -22,7 +22,7 @@ namespace Supermarket.Specs.Bindings
             table.MapValue("Tax Rate", c => c.TrimEnd('%'));
             var products = table.CreateSet<Product>().ForEach(p => p.Number = p.GetEANFromHash());
 
-            _context.AddProducts(products);
+            _driver.AddProducts(products);
         }
     }
 }

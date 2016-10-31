@@ -54,7 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Bindings\CashDeskSpecsContext.cs" />
+    <Compile Include="Bindings\CashDeskSpecsDriver.cs" />
     <Compile Include="Bindings\CheckoutBindings.cs" />
     <Compile Include="Bindings\CommonBindings.cs" />
     <Compile Include="Bindings\Hooks.cs" />

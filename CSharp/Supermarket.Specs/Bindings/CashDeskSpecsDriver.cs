@@ -6,12 +6,12 @@ using Supermarket.Specs.Tools;
 
 namespace Supermarket.Specs.Bindings
 {
-    public class CashDeskSpecsContext
+    public class CashDeskSpecsDriver
     {
         private readonly IProductRepository _repository;
         private readonly ICashRegister _cashRegister;
 
-        public CashDeskSpecsContext(IProductRepository repository, ICashRegister cashRegister)
+        public CashDeskSpecsDriver(IProductRepository repository, ICashRegister cashRegister)
         {
             _repository = repository;
             _cashRegister = cashRegister;

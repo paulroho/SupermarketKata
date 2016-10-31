@@ -9,31 +9,31 @@ namespace Supermarket.Specs.Bindings
     [Binding]
     public class CheckoutBindings
     {
-        private readonly CashDeskSpecsContext _context;
+        private readonly CashDeskSpecsDriver _driver;
 
-        public CheckoutBindings(CashDeskSpecsContext context)
+        public CheckoutBindings(CashDeskSpecsDriver driver)
         {
-            _context = context;
+            _driver = driver;
         }
 
         [Given(@"I scan the following products at the cash desk:")]
         public void GivenIScanTheFollowingProductsAtTheCashDesk(Table table)
         {
             var productNames = table.CreateSet<ProductInfo>().Select(pi => pi.Product);
-            _context.ScanProductsByName(productNames);
+            _driver.ScanProductsByName(productNames);
         }
 
         [When(@"I check out")]
         public void WhenICheckOut()
         {
-            var receipt = _context.Checkout();
-            _context.Receipt = receipt;
+            var receipt = _driver.Checkout();
+            _driver.Receipt = receipt;
         }
 
         [Then(@"the receipt contains this information:")]
         public void ThenTheReceiptContaintsThisInformation(string receiptAsString)
         {
-            _context.Receipt.ShouldBeRepresentedBy(receiptAsString);
+            _driver.Receipt.ShouldBeRepresentedBy(receiptAsString);
         }
     }
 
