@@ -4,20 +4,11 @@ namespace Supermarket.Model.Checkout
 {
     public interface ICashRegister
     {
-        void Scan(EAN ean);
-        Receipt CreateReceipt();
+        // TODO: Defined the API for the cash register
     }
 
     public class CashRegister : ICashRegister
     {
-        public void Scan(EAN ean)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Receipt CreateReceipt()
-        {
-            throw new System.NotImplementedException();
-        }
+        // TODO: Implement the cash register
     }
 }
