@@ -20,4 +20,6 @@ Currently this kata is available in the following languages:
 - [C#](CSharp/) (.NET 4.x)
 - [Java](java/) - Thanks to [@rolger](https://github.com/rolger/supermarketkata) for the contribution!
 
+### How to Contribute
+
 If you have ported this kata to another language, please send a pull request. For easier tracking please consider the issues already available for some languages. If would need another language or are planning to contribute code in an other language, please file an issue for the language. Thank you!
