@@ -16,5 +16,7 @@ We have good experiences in handing out the instructions task by task. This help
 ## Code of the initial system
 There is source code for the initial system.
 
-Currently this kata is available in [C#](CSharp/) (.NET 4.x).
-If you have ported this kata to another language, please send a pull request.
+Currently this kata is available in the following languages:
+- [C#](CSharp/) (.NET 4.x)
+- [Java](java/) - Thanks to @rolger for the contribution
+If you have ported this kata to another language, please send a pull request. For easier tracking please consider the issues already available for some languages. If would need another language or are planning to contribute code in an other language, please file an issue for the language. Thank you!
