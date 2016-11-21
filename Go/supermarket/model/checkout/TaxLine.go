@@ -11,5 +11,5 @@ type TaxLine struct {
 }
 
 func (line TaxLine) String() string {
-	return fmt.Sprintf("VAT %v: %v", line.Rate, line.Amount)
+	return fmt.Sprintf("VAT %v: %v", line.Rate, line.Amount.String())
 }
