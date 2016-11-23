@@ -13,7 +13,8 @@ type CashSpecsDriver struct {
 
 func NewCashSpecsDriver() *CashSpecsDriver {
 	return &CashSpecsDriver{
-		repository: NewSimpleProductRepository()}
+		repository:   NewSimpleProductRepository(),
+		cashRegister: checkout.NewSimpleCashRegister()}
 }
 
 func (driver *CashSpecsDriver) AddProducts(products []core.Product) {
