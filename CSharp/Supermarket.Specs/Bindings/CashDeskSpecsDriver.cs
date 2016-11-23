@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Supermarket.Model.Checkout;
 using Supermarket.Model.Core;
-using Supermarket.Specs.Tools;
 
 namespace Supermarket.Specs.Bindings
 {
@@ -27,7 +26,7 @@ namespace Supermarket.Specs.Bindings
             foreach (var productName in productNames)
             {
                 var product = _repository.GetProductByName(productName);
-                var ean = product.GetEANFromHash();
+                var ean = product.Number;
 
                 // TODO: Add code to scan the product with the cash register
                 // _cashRegister...
