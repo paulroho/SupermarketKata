@@ -71,10 +71,11 @@ func iCheckOut() error {
 }
 
 func theReceiptContainsThisInformation(expected *gherkin.DocString) (result error) {
-	printer := NewSimpleReceiptPrinter()
-	resultText := printer.Print(driver.Receipt())
+	printer := NewTestingReceiptPrinter()
+	receipt := driver.Receipt()
+	resultText := printer.Print(receipt)
 	if expected.Content != resultText {
-		result = fmt.Errorf("Retrieved: \n\"\"\"\n" + resultText + "\n\"\"\"\n")
+		result = fmt.Errorf("Retrieved: \n\"\"\"\n%s\n\"\"\"\n", resultText)
 	}
 
 	return
