@@ -62,6 +62,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Model\Core\EANTests.cs" />
+    <Compile Include="Model\Core\ProductTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,9 +6,9 @@ namespace Supermarket.Specs.Tools
     {
         private static int _modulusEan9 = (int)1E9;
 
-        public static EAN GetEANFromHash(this Product product)
+        public static EAN GetEANFromProductName(this string name)
         {
-            var hash = GetAllDigitHash(product.Name, 9, _modulusEan9);
+            var hash = GetAllDigitHash(name, 9, _modulusEan9);
             return EAN.NewEAN(hash);
         }
 
