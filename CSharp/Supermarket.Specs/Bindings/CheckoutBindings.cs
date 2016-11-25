@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using Supermarket.Model.Checkout;
 using Supermarket.Specs.Tools;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
@@ -35,10 +34,13 @@ namespace Supermarket.Specs.Bindings
         {
             _driver.Receipt.ShouldBeRepresentedBy(receiptAsString);
         }
+
+        private class ProductInfo
+        {
+#pragma warning disable 649
+            public string Product;
+#pragma warning restore 649
+        }
     }
 
-    public class ProductInfo
-    {
-        public string Product;
-    }
 }

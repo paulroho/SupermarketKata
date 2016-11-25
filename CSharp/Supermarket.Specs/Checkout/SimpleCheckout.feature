@@ -25,10 +25,10 @@ Scenario: Scanning just products with the same tax rate. The tax contained in th
 	When I check out
 
 	Then the receipt contains this information:
-	"""
+		"""
 		Milk 1l         1.20€
 		Gherkins 350g   3.60€
 		---------------------
 		Total           4.80€
 		Incl. 20% VAT   0.80€
-	"""
+		"""

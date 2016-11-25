@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Text;
 using Supermarket.Model.Checkout;
 
@@ -25,7 +24,7 @@ namespace Supermarket.Specs.Tools
         {
             foreach (var line in receipt.TaxLines)
             {
-                sb.AppendLine($"Incl. {line.Rate / 100.0:P0} VAT {DecimalToString(line.Amount)}");
+                sb.AppendLine($"Incl. {PercentageToString(line.Rate)} VAT {DecimalToString(line.Amount)}");
             }
         }
 
@@ -45,7 +44,12 @@ namespace Supermarket.Specs.Tools
 
         private static string DecimalToString(decimal dec)
         {
-            return dec.ToString("C", new CultureInfo("en-US"));
+            return dec.ToString("F") + "€";
+        }
+
+        private static string PercentageToString(int percentage)
+        {
+            return percentage + "%";
         }
     }
 }

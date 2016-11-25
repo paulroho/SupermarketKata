@@ -2,8 +2,15 @@
 {
     public class BookingLine
     {
-        public string Text { get; set; }
-        public decimal Price { get; set; }
+        public BookingLine(string text, decimal price)
+        {
+            Text = text;
+            Price = price;
+        }
+
+        public string Text { get; }
+
+        public decimal Price { get; }
 
         public override string ToString() => $"{Text}: {Price:C}";
     }
