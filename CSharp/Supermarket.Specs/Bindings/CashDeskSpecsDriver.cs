@@ -25,8 +25,7 @@ namespace Supermarket.Specs.Bindings
         {
             foreach (var productName in productNames)
             {
-                var product = _repository.GetProductByName(productName);
-                var ean = product.Number;
+                var ean = GetEanByProductName(productName);
 
                 // TODO: Add code to scan the product with the cash register
                 // _cashRegister...
@@ -40,6 +39,11 @@ namespace Supermarket.Specs.Bindings
             // TODO: Add code to get the receipt from the cash register
             // return _cashRegister...
             throw new NotImplementedException();
+        }
+
+        private EAN GetEanByProductName(string productName)
+        {
+            return _repository.GetProductByName(productName).Number;
         }
     }
 }
