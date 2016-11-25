@@ -126,8 +126,8 @@ this.FeatureBackground();
  testRunner.When("I check out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 27
- testRunner.Then("the receipt contains this information:", "\tMilk 1l         1.20€\r\n\tGherkins 350g   3.60€\r\n\t---------------------\r\n\tTotal   " +
-                    "        4.80€\r\n\tIncl. 20% VAT   0.80€", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the receipt contains this information:", "Milk 1l         1.20€\r\nGherkins 350g   3.60€\r\n---------------------\r\nTotal       " +
+                    "    4.80€\r\nIncl. 20% VAT   0.80€", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

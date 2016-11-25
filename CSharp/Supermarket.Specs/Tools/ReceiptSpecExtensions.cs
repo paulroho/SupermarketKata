@@ -23,7 +23,10 @@ namespace Supermarket.Specs.Tools
         private static string Normalize(string receiptAsString)
         {
             var whiteSpacesCompressed = Regex.Replace(receiptAsString, " {2,}", " ");
-            return Regex.Replace(whiteSpacesCompressed, "-*", "");
+            var separatorRemoved = Regex.Replace(whiteSpacesCompressed, "-*", "");
+            var leadingLinesStripped = separatorRemoved.TrimStart('\r', '\n');
+            var trailingLinesStripped = leadingLinesStripped.TrimEnd('\r', '\n');
+            return trailingLinesStripped;
         }
     }
 }

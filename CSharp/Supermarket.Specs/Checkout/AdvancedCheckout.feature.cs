@@ -126,9 +126,9 @@ this.FeatureBackground();
  testRunner.When("I check out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 27
- testRunner.Then("the receipt contains this information:", "\tButter 250g              1.80€\r\n\tBook \"Cucumber Slicing\"  8.80€\r\n\t--------------" +
-                    "----------------\r\n\tTotal                   10.60€\r\n\tIncl. 10% VAT            0.8" +
-                    "0€\r\n\tIncl. 20% VAT            0.30€ ", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the receipt contains this information:", "Butter 250g              1.80€\r\nBook \"Cucumber Slicing\"  8.80€\r\n-----------------" +
+                    "-------------\r\nTotal                   10.60€\r\nIncl. 10% VAT            0.80€\r\nI" +
+                    "ncl. 20% VAT            0.30€", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
