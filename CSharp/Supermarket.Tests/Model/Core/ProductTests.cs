@@ -122,5 +122,33 @@ namespace Supermarket.Tests.Model.Core
 
             act.ShouldThrow<ArgumentOutOfRangeException>();
         }
+
+        [TestMethod]
+        public void GrossPrice_WhenUnitPriceAndTaxRateAreSet_CalculatesTheGrossPrice()
+        {
+            var product = new Product("Dummy Product Name", SomeEAN)
+            {
+                TaxRate = 20,
+                UnitPrice = 123.40M,
+            };
+
+            var actual = product.GrossPrice;
+
+            actual.Should().Be(123.40M + 24.68M);
+        }
+
+        [TestMethod]
+        public void GrossPrice_WhenItWouldHaveSubCentParts_RoundsItProperly()
+        {
+            var product = new Product("Dummy Product Name", SomeEAN)
+            {
+                TaxRate = 19,
+                UnitPrice = 123.40M,
+            };
+
+            var actual = product.GrossPrice;
+
+            actual.Should().Be(123.40M + 23.45M);   // Exact tax would be 23.446M
+        }
     }
 }

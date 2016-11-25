@@ -63,6 +63,8 @@ namespace Supermarket.Model.Core
             }
         }
 
+        public decimal GrossPrice => Math.Round(UnitPrice*(1 + TaxRate/100M), 2, MidpointRounding.AwayFromZero);
+
         public override string ToString() => $"{Name} {UnitPrice:C}";
     }
 }
