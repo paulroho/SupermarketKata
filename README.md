@@ -19,6 +19,7 @@ There is source code for the initial system.
 Currently this kata is available in the following languages:
 - [C#](CSharp/) (.NET 4.x)
 - [Java](java/) - Thanks to [@rolger](https://github.com/rolger/supermarketkata) for the contribution!
+- [Go](Go/) - Thanks to [@dertseha](https://github.com/dertseha) for the contribution!
 
 ### How to Contribute
 
